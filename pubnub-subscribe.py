@@ -55,7 +55,7 @@ class MySubscribeCallback(SubscribeCallback):
         pass  # handle incoming presence data
  
     def message(self, pubnub, message):
-        print message.message
+        print(message.message)
 
 
 def main():
