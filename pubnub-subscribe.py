@@ -60,11 +60,11 @@ class MySubscribeCallback(SubscribeCallback):
 
 def main():
     pnconfig = PNConfiguration()
-    pnconfig.subscribe_key = os.environ('PUBNUB_SUBSCRIBE_KEY')
+    pnconfig.subscribe_key = os.environ['PUBNUB_SUBSCRIBE_KEY']
     pnconfig.ssl = False
     pubnub = PubNub(pnconfig)
     pubnub.add_listener(MySubscribeCallback())
-    pubnub.subscribe().channels(os.environ('PUBNUB_CHANNELS').split(':')).execute()
+    pubnub.subscribe().channels(os.environ['PUBNUB_CHANNELS'].split(':')).execute()
 
 
 if __name__ == '__main__':
