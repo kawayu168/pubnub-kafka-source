@@ -10,8 +10,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 RUN pip3 install pubnub
 ADD run.sh /run.sh
-ADD pubnub.py /pubnub.py
+ADD pubnub-subscribe.py /pubnub-subscribe.py
 RUN chmod +x /run.sh && \
-    chmod ugo+rx /pubnub.py
+    chmod ugo+rx /pubnub-subscribe.py
 
 CMD ["/run.sh"]

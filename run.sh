@@ -23,4 +23,4 @@ if [ -z "${PUBNUB_CHANNELS}" ]; then
 	exit 1
 fi
 
-/pubnub.py | kafkacat -b $KAFKA_BROKER $KAFKA_TOPIC
+/pubnub-subscribe.py | kafkacat -b $KAFKA_BROKER $KAFKA_TOPIC
